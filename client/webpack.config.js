@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
-
 module.exports = () => {
   return {
     mode: "development",
@@ -19,7 +18,7 @@ module.exports = () => {
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles.
       new HtmlWebpackPlugin({
-        template: "index.html",
+        template: "./index.html",
         title: "JATE",
       }),
 
